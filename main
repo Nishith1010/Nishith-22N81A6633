@@ -1,0 +1,106 @@
+<html>
+<head>
+
+    <title>Apple(India)</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <nav>
+        <ul>
+          <li><a href="#">Mac</a></li>  
+          <li><a href="#">iPad</a></li>  
+          <li><a href="#">iPhone</a></li>  
+          <li><a href="#">Watch</a></li>  
+          <li><a href="#">TV</a></li>  
+          <li><a href="#">Music</a></li>  
+          <li><a href="#">Service</a></li>  
+        </ul>
+    </nav>
+    <div style="text-align: center;">
+        <img width="1200" height="400" src="C:\Users\HP\Desktop\SDC webpage\images\img7.jpg">
+    </div>
+     
+<div id="login-section" class="hidden">
+    <h1><p style="color:goldenrod">Apple ID</p></h1>
+        <h1>Login</h1>
+        <form onsubmit="return login">
+            <input type="text" id="username" placeholder="Username" required><br>
+            <input type="password" id="password" placeholder="Password" required><br>
+            <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="#" onclick="showRegistration()">Create an account</a></p>
+    </div>
+
+	<div id="registration-section" class="hidden">
+        <h1>Create</h1>
+
+        <form onsubmit="return register()">
+            <input type="text" id="regUsername" placeholder="Username" required><br>
+            <input type="password" id="regPassword" placeholder="Password" required><br>
+            <button type="submit">Register</button>
+        </form>
+
+        <p>Already have an account? <a href="#" onclick="showLogin()">Login here</a></p>
+    </div>
+	<div id="main-section" class="hidden">
+        <p><h1 style="color:purple">Shop for your favorite Apple products.</h1></p>
+
+	<div class="products">
+        <div class="product">
+            <h2>iPhone 15 128GB</h2>
+            <p>Price: <b>₹79,900</b></p>
+            <button class="add-to-cart" onclick="addToCart('Iphone 15 128GB', 79,900)">Add to Cart</button>
+            <img src="C:\Users\HP\Desktop\SDC webpage\images\img1.png" alt="iPhone 15" width="500" height="300">
+            <p align="right"><b>About : </b>Super Retina XDR display, 6.1‑inch all‑screen OLED display.<br>Dual 48MP camera system (Ultra Wide and Main).<br>A16 Bionic chip, 6‑core CPU with 2 performance and 4 efficiency cores, 5‑core GPU,16‑core Neural Engine.<br>USB-Charge cable(excluded 20W adapter).
+            </p>
+        </div>
+
+        <div class="product">
+            <h2>iPhone 15 pro 128GB</h2>
+            <p>Price: <b>₹1,34,900</b></p>
+            <button class="add-to-cart" onclick="addToCart('iPhone 15 128GB', 1,34,900)">Add to Cart</button>
+            <img src="C:\Users\HP\Desktop\SDC webpage\images\img2.png" alt="iPhone 15 pro" width="500" height="350">
+            <p align="right"><b>About : </b>Super Retina XDR display, 6.1‑inch all‑screen OLED display.<br>
+                Pro 48MP camera system (Ultra Wide, Main, and Telephoto.<br>
+                A17 Pro chip, New 6‑core CPU with 2 performance and 4 efficiency cores, New 6‑core GPU, New 16‑core Neural Engine.<br>
+                USB-Charge cable(excluded 20W adapter).</p>
+        </div>
+        
+        <div class="product">
+            <h2>iPhone 15 pro max 256GB</h2>
+            <p>Price: <b>₹1,59,900</b></p>
+            <button class="add-to-cart" onclick="addToCart('iPhone 15 pro max 256GB', 1,59,900)">Add to Cart</button>
+            <img src="C:\Users\HP\Desktop\SDC webpage\images\imgpromax.avif" alt="iPhone 15 pro max" width="500" height="380">
+            <p align="right"><b>About : </b>Super Retina XDR display, 6.7‑inch (diagonal) all‑screen OLED display.<br>
+                Pro 48MP camera system (Ultra Wide, Main, and Telephoto.<br>
+                A17 Pro chip, New 6‑core CPU with 2 performance and 4 efficiency cores, New 6‑core GPU, New 16‑core Neural Engine.<br>
+                USB-Charge cable(excluded 20W adapter).</p>
+         </div>
+         <div class="product">
+            <h2>MacBook Air 15"</h2>
+            <p>Price: <b>₹1,34,900</b></p>
+            <button class="add-to-cart" onclick="addToCart('MacBook Air 15', 1,34,900)">Add to Cart</button>
+            <img src="C:\Users\HP\Desktop\SDC webpage\images\img4.jpg" alt="MacBook Air 15" width="500" height="250">
+         </div>
+         <div class="product">
+            <h2>iPad Pro</h2>
+            <p>Price: <b>₹81,900</b></p>
+            <button class="add-to-cart" onclick="addToCart('iPad Pro', 81,900)">Add to Cart</button>
+            <img src="C:\Users\HP\Desktop\SDC webpage\images\img5.png" alt="MacBook Air 15" width="500" height="350">
+         </div>
+
+
+
+        <div class="cart">
+            <h2>Shopping Cart</h2>
+            <ul id="cart-items"></ul>
+            <p>Total: ₹<span id="total">0</span></p>
+            <button onclick="checksout()">Checkout</button>
+        </div>
+    </div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
