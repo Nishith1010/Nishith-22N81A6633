@@ -13,7 +13,7 @@ function updateCart() {
     cartList.innerHTML = "";
     cartItems.forEach(item => {
         let listItem = document.createElement("li");
-        listItem.innerText = `₹{item.product} - ₹₹{item.price}`;
+        listItem.innerText = `${item.product} - $${item.price}`;
         cartList.appendChild(listItem);
         total += item.price;
     });
